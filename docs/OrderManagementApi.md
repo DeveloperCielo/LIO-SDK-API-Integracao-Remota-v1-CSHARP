@@ -1,6 +1,6 @@
 # IO.Swagger.Api.OrderManagementApi
 
-All URIs are relative to *https://api.cielo.com.br/order-management/v1*
+All URIs are relative to *https://api.cielo.com.br/sandbox-lio/order-management/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -39,6 +39,19 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
+            // Configure API key authorization: access-token
+            Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("access-token", "Bearer");
+            // Configure API key authorization: client-id
+            Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
@@ -76,7 +89,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
 
 ### HTTP request headers
 
@@ -108,6 +121,19 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
+            // Configure API key authorization: access-token
+            Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("access-token", "Bearer");
+            // Configure API key authorization: client-id
+            Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
@@ -143,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
 
 ### HTTP request headers
 
@@ -175,6 +201,19 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
+            // Configure API key authorization: access-token
+            Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("access-token", "Bearer");
+            // Configure API key authorization: client-id
+            Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
@@ -209,7 +248,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
 
 ### HTTP request headers
 
@@ -241,6 +280,19 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
+            // Configure API key authorization: access-token
+            Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("access-token", "Bearer");
+            // Configure API key authorization: client-id
+            Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
@@ -278,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
 
 ### HTTP request headers
 
@@ -310,6 +362,19 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
+            // Configure API key authorization: access-token
+            Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("access-token", "Bearer");
+            // Configure API key authorization: client-id
+            Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
@@ -345,7 +410,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
 
 ### HTTP request headers
 
@@ -377,6 +442,19 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
+            // Configure API key authorization: access-token
+            Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("access-token", "Bearer");
+            // Configure API key authorization: client-id
+            Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
@@ -411,7 +489,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
 
 ### HTTP request headers
 
@@ -443,6 +521,19 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
+            // Configure API key authorization: access-token
+            Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("access-token", "Bearer");
+            // Configure API key authorization: client-id
+            Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
@@ -478,7 +569,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
 
 ### HTTP request headers
 
@@ -510,6 +601,19 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
+            // Configure API key authorization: access-token
+            Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("access-token", "Bearer");
+            // Configure API key authorization: client-id
+            Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
@@ -545,7 +649,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
 
 ### HTTP request headers
 
@@ -577,6 +681,19 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
+            // Configure API key authorization: access-token
+            Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("access-token", "Bearer");
+            // Configure API key authorization: client-id
+            Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
@@ -613,7 +730,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
 
 ### HTTP request headers
 
@@ -645,6 +762,19 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
+            // Configure API key authorization: access-token
+            Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("access-token", "Bearer");
+            // Configure API key authorization: client-id
+            Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
@@ -684,7 +814,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
 
 ### HTTP request headers
 
