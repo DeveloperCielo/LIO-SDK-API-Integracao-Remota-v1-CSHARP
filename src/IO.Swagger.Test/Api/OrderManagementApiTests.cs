@@ -75,9 +75,9 @@ namespace IO.Swagger.Test
             //string accessToken = null;
             //string merchantId = null;
             //string id = null;
-            //OrderItem body = null;
+            //Body1 body = null;
             //var response = instance.OrderAddItem(clientId, accessToken, merchantId, id, body);
-            //Assert.IsInstanceOf<Response> (response, "response is Response");
+            //Assert.IsInstanceOf<InlineResponse201> (response, "response is InlineResponse201");
         }
         
         /// <summary>
@@ -90,9 +90,9 @@ namespace IO.Swagger.Test
             //string clientId = null;
             //string accessToken = null;
             //string merchantId = null;
-            //Order body = null;
+            //Body body = null;
             //var response = instance.OrderCreate(clientId, accessToken, merchantId, body);
-            //Assert.IsInstanceOf<Response> (response, "response is Response");
+            //Assert.IsInstanceOf<InlineResponse201> (response, "response is InlineResponse201");
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace IO.Swagger.Test
             //string id = null;
             //string itemId = null;
             //var response = instance.OrderDeleteItem(clientId, accessToken, merchantId, id, itemId);
-            //Assert.IsInstanceOf<Response> (response, "response is Response");
+            //Assert.IsInstanceOf<InlineResponse201> (response, "response is InlineResponse201");
         }
         
         /// <summary>
@@ -138,7 +138,7 @@ namespace IO.Swagger.Test
             //string merchantId = null;
             //string id = null;
             //var response = instance.OrderGet(clientId, accessToken, merchantId, id);
-            //Assert.IsInstanceOf<Order> (response, "response is Order");
+            //Assert.IsInstanceOf<InlineResponse200> (response, "response is InlineResponse200");
         }
         
         /// <summary>
@@ -152,8 +152,8 @@ namespace IO.Swagger.Test
             //string accessToken = null;
             //string merchantId = null;
             //string parameters = null;
-            //instance.OrderGetByParameters(clientId, accessToken, merchantId, parameters);
-            
+            //var response = instance.OrderGetByParameters(clientId, accessToken, merchantId, parameters);
+            //Assert.IsInstanceOf<List<InlineResponse200>> (response, "response is List<InlineResponse200>");
         }
         
         /// <summary>
@@ -168,7 +168,7 @@ namespace IO.Swagger.Test
             //string merchantId = null;
             //string id = null;
             //var response = instance.OrderGetItem(clientId, accessToken, merchantId, id);
-            //Assert.IsInstanceOf<OrderItem> (response, "response is OrderItem");
+            //Assert.IsInstanceOf<OrdersItems> (response, "response is OrdersItems");
         }
         
         /// <summary>
@@ -183,7 +183,7 @@ namespace IO.Swagger.Test
             //string merchantId = null;
             //string id = null;
             //var response = instance.OrderGetTransactions(clientId, accessToken, merchantId, id);
-            //Assert.IsInstanceOf<Transaction> (response, "response is Transaction");
+            //Assert.IsInstanceOf<OrdersTransactions> (response, "response is OrdersTransactions");
         }
         
         /// <summary>
@@ -214,9 +214,9 @@ namespace IO.Swagger.Test
             //string merchantId = null;
             //string id = null;
             //string itemId = null;
-            //OrderItem body = null;
+            //Body2 body = null;
             //var response = instance.OrderUpdateItem(clientId, accessToken, merchantId, id, itemId, body);
-            //Assert.IsInstanceOf<Response> (response, "response is Response");
+            //Assert.IsInstanceOf<InlineResponse201> (response, "response is InlineResponse201");
         }
         
     }

@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="orderadditem"></a>
 # **OrderAddItem**
-> Response OrderAddItem (string clientId, string accessToken, string merchantId, string id, OrderItem body)
+> InlineResponse201 OrderAddItem (string clientId, string accessToken, string merchantId, string id, Body1 body)
 
 
 
@@ -38,11 +38,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure API key authorization: merchant-id
-            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
             // Configure API key authorization: access-token
             Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -51,17 +46,21 @@ namespace Example
             Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
 
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
             var merchantId = merchantId_example;  // string | Identificador do estabelecimento comercial gerado durante o processo de cadastro.
             var id = id_example;  // string | Identificador do pedido.
-            var body = new OrderItem(); // OrderItem | 
+            var body = new Body1(); // Body1 | 
 
             try
             {
-                Response result = apiInstance.OrderAddItem(clientId, accessToken, merchantId, id, body);
+                InlineResponse201 result = apiInstance.OrderAddItem(clientId, accessToken, merchantId, id, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -81,15 +80,15 @@ Name | Type | Description  | Notes
  **accessToken** | **string**| Token de acesso (Access Token) gerado durante o processo de cadastro. | 
  **merchantId** | **string**| Identificador do estabelecimento comercial gerado durante o processo de cadastro. | 
  **id** | **string**| Identificador do pedido. | 
- **body** | [**OrderItem**](OrderItem.md)|  | 
+ **body** | [**Body1**](Body1.md)|  | 
 
 ### Return type
 
-[**Response**](Response.md)
+[**InlineResponse201**](InlineResponse201.md)
 
 ### Authorization
 
-[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
+[access-token](../README.md#access-token), [client-id](../README.md#client-id), [merchant-id](../README.md#merchant-id)
 
 ### HTTP request headers
 
@@ -100,7 +99,7 @@ Name | Type | Description  | Notes
 
 <a name="ordercreate"></a>
 # **OrderCreate**
-> Response OrderCreate (string clientId, string accessToken, string merchantId, Order body)
+> InlineResponse201 OrderCreate (string clientId, string accessToken, string merchantId, Body body)
 
 
 
@@ -120,11 +119,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure API key authorization: merchant-id
-            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
             // Configure API key authorization: access-token
             Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -133,16 +127,20 @@ namespace Example
             Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
 
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
             var merchantId = merchantId_example;  // string | Identificador do estabelecimento comercial gerado durante o processo de cadastro.
-            var body = new Order(); // Order | 
+            var body = new Body(); // Body | 
 
             try
             {
-                Response result = apiInstance.OrderCreate(clientId, accessToken, merchantId, body);
+                InlineResponse201 result = apiInstance.OrderCreate(clientId, accessToken, merchantId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -161,15 +159,15 @@ Name | Type | Description  | Notes
  **clientId** | **string**| Token da aplicação (APP Token) gerado durante o processo de cadastro. | 
  **accessToken** | **string**| Token de acesso (Access Token) gerado durante o processo de cadastro. | 
  **merchantId** | **string**| Identificador do estabelecimento comercial gerado durante o processo de cadastro. | 
- **body** | [**Order**](Order.md)|  | 
+ **body** | [**Body**](Body.md)|  | 
 
 ### Return type
 
-[**Response**](Response.md)
+[**InlineResponse201**](InlineResponse201.md)
 
 ### Authorization
 
-[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
+[access-token](../README.md#access-token), [client-id](../README.md#client-id), [merchant-id](../README.md#merchant-id)
 
 ### HTTP request headers
 
@@ -200,11 +198,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure API key authorization: merchant-id
-            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
             // Configure API key authorization: access-token
             Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -213,6 +206,10 @@ namespace Example
             Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
 
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
@@ -248,7 +245,7 @@ void (empty response body)
 
 ### Authorization
 
-[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
+[access-token](../README.md#access-token), [client-id](../README.md#client-id), [merchant-id](../README.md#merchant-id)
 
 ### HTTP request headers
 
@@ -259,7 +256,7 @@ void (empty response body)
 
 <a name="orderdeleteitem"></a>
 # **OrderDeleteItem**
-> Response OrderDeleteItem (string clientId, string accessToken, string merchantId, string id, string itemId)
+> InlineResponse201 OrderDeleteItem (string clientId, string accessToken, string merchantId, string id, string itemId)
 
 
 
@@ -279,11 +276,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure API key authorization: merchant-id
-            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
             // Configure API key authorization: access-token
             Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -292,6 +284,10 @@ namespace Example
             Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
 
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
@@ -302,7 +298,7 @@ namespace Example
 
             try
             {
-                Response result = apiInstance.OrderDeleteItem(clientId, accessToken, merchantId, id, itemId);
+                InlineResponse201 result = apiInstance.OrderDeleteItem(clientId, accessToken, merchantId, id, itemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -326,11 +322,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Response**](Response.md)
+[**InlineResponse201**](InlineResponse201.md)
 
 ### Authorization
 
-[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
+[access-token](../README.md#access-token), [client-id](../README.md#client-id), [merchant-id](../README.md#merchant-id)
 
 ### HTTP request headers
 
@@ -341,7 +337,7 @@ Name | Type | Description  | Notes
 
 <a name="orderget"></a>
 # **OrderGet**
-> Order OrderGet (string clientId, string accessToken, string merchantId, string id)
+> InlineResponse200 OrderGet (string clientId, string accessToken, string merchantId, string id)
 
 
 
@@ -361,11 +357,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure API key authorization: merchant-id
-            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
             // Configure API key authorization: access-token
             Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -374,6 +365,10 @@ namespace Example
             Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
 
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
@@ -383,7 +378,7 @@ namespace Example
 
             try
             {
-                Order result = apiInstance.OrderGet(clientId, accessToken, merchantId, id);
+                InlineResponse200 result = apiInstance.OrderGet(clientId, accessToken, merchantId, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -406,11 +401,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Order**](Order.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
-[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
+[access-token](../README.md#access-token), [client-id](../README.md#client-id), [merchant-id](../README.md#merchant-id)
 
 ### HTTP request headers
 
@@ -421,7 +416,7 @@ Name | Type | Description  | Notes
 
 <a name="ordergetbyparameters"></a>
 # **OrderGetByParameters**
-> void OrderGetByParameters (string clientId, string accessToken, string merchantId, string parameters)
+> List<InlineResponse200> OrderGetByParameters (string clientId, string accessToken, string merchantId, string parameters)
 
 
 
@@ -441,11 +436,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure API key authorization: merchant-id
-            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
             // Configure API key authorization: access-token
             Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -454,6 +444,10 @@ namespace Example
             Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
 
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
@@ -463,7 +457,8 @@ namespace Example
 
             try
             {
-                apiInstance.OrderGetByParameters(clientId, accessToken, merchantId, parameters);
+                List&lt;InlineResponse200&gt; result = apiInstance.OrderGetByParameters(clientId, accessToken, merchantId, parameters);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -485,11 +480,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**List<InlineResponse200>**](InlineResponse200.md)
 
 ### Authorization
 
-[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
+[access-token](../README.md#access-token), [client-id](../README.md#client-id), [merchant-id](../README.md#merchant-id)
 
 ### HTTP request headers
 
@@ -500,7 +495,7 @@ void (empty response body)
 
 <a name="ordergetitem"></a>
 # **OrderGetItem**
-> OrderItem OrderGetItem (string clientId, string accessToken, string merchantId, string id)
+> OrdersItems OrderGetItem (string clientId, string accessToken, string merchantId, string id)
 
 
 
@@ -520,11 +515,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure API key authorization: merchant-id
-            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
             // Configure API key authorization: access-token
             Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -533,6 +523,10 @@ namespace Example
             Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
 
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
@@ -542,7 +536,7 @@ namespace Example
 
             try
             {
-                OrderItem result = apiInstance.OrderGetItem(clientId, accessToken, merchantId, id);
+                OrdersItems result = apiInstance.OrderGetItem(clientId, accessToken, merchantId, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -565,11 +559,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrderItem**](OrderItem.md)
+[**OrdersItems**](OrdersItems.md)
 
 ### Authorization
 
-[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
+[access-token](../README.md#access-token), [client-id](../README.md#client-id), [merchant-id](../README.md#merchant-id)
 
 ### HTTP request headers
 
@@ -580,7 +574,7 @@ Name | Type | Description  | Notes
 
 <a name="ordergettransactions"></a>
 # **OrderGetTransactions**
-> Transaction OrderGetTransactions (string clientId, string accessToken, string merchantId, string id)
+> OrdersTransactions OrderGetTransactions (string clientId, string accessToken, string merchantId, string id)
 
 
 
@@ -600,11 +594,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure API key authorization: merchant-id
-            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
             // Configure API key authorization: access-token
             Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -613,6 +602,10 @@ namespace Example
             Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
 
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
@@ -622,7 +615,7 @@ namespace Example
 
             try
             {
-                Transaction result = apiInstance.OrderGetTransactions(clientId, accessToken, merchantId, id);
+                OrdersTransactions result = apiInstance.OrderGetTransactions(clientId, accessToken, merchantId, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -645,11 +638,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Transaction**](Transaction.md)
+[**OrdersTransactions**](OrdersTransactions.md)
 
 ### Authorization
 
-[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
+[access-token](../README.md#access-token), [client-id](../README.md#client-id), [merchant-id](../README.md#merchant-id)
 
 ### HTTP request headers
 
@@ -680,11 +673,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure API key authorization: merchant-id
-            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
             // Configure API key authorization: access-token
             Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -693,6 +681,10 @@ namespace Example
             Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
 
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
@@ -730,7 +722,7 @@ void (empty response body)
 
 ### Authorization
 
-[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
+[access-token](../README.md#access-token), [client-id](../README.md#client-id), [merchant-id](../README.md#merchant-id)
 
 ### HTTP request headers
 
@@ -741,7 +733,7 @@ void (empty response body)
 
 <a name="orderupdateitem"></a>
 # **OrderUpdateItem**
-> Response OrderUpdateItem (string clientId, string accessToken, string merchantId, string id, string itemId, OrderItem body)
+> InlineResponse201 OrderUpdateItem (string clientId, string accessToken, string merchantId, string id, string itemId, Body2 body)
 
 
 
@@ -761,11 +753,6 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure API key authorization: merchant-id
-            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
             // Configure API key authorization: access-token
             Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -774,6 +761,10 @@ namespace Example
             Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
 
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
@@ -781,11 +772,11 @@ namespace Example
             var merchantId = merchantId_example;  // string | Identificador do estabelecimento comercial gerado durante o processo de cadastro.
             var id = id_example;  // string | Identificador do pedido.
             var itemId = itemId_example;  // string | Identificador do item do pedido.
-            var body = new OrderItem(); // OrderItem | 
+            var body = new Body2(); // Body2 | 
 
             try
             {
-                Response result = apiInstance.OrderUpdateItem(clientId, accessToken, merchantId, id, itemId, body);
+                InlineResponse201 result = apiInstance.OrderUpdateItem(clientId, accessToken, merchantId, id, itemId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -806,15 +797,15 @@ Name | Type | Description  | Notes
  **merchantId** | **string**| Identificador do estabelecimento comercial gerado durante o processo de cadastro. | 
  **id** | **string**| Identificador do pedido. | 
  **itemId** | **string**| Identificador do item do pedido. | 
- **body** | [**OrderItem**](OrderItem.md)|  | 
+ **body** | [**Body2**](Body2.md)|  | 
 
 ### Return type
 
-[**Response**](Response.md)
+[**InlineResponse201**](InlineResponse201.md)
 
 ### Authorization
 
-[merchant-id](../README.md#merchant-id), [access-token](../README.md#access-token), [client-id](../README.md#client-id)
+[access-token](../README.md#access-token), [client-id](../README.md#client-id), [merchant-id](../README.md#merchant-id)
 
 ### HTTP request headers
 

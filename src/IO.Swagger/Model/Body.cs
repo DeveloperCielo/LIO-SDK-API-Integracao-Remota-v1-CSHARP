@@ -25,10 +25,10 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// Order
+    /// Body
     /// </summary>
     [DataContract]
-    public partial class Order :  IEquatable<Order>, IValidatableObject
+    public partial class Body :  IEquatable<Body>, IValidatableObject
     {
         /// <summary>
         /// Status do pedido.
@@ -94,12 +94,12 @@ namespace IO.Swagger.Model
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Order" /> class.
+        /// Initializes a new instance of the <see cref="Body" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected Order() { }
+        protected Body() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Order" /> class.
+        /// Initializes a new instance of the <see cref="Body" /> class.
         /// </summary>
         /// <param name="Id">UUID que identifica unicamente o pedido. (required).</param>
         /// <param name="Number">Número do pedido. Gerelmente esse número representa o identificador do pedido em um sistema externo através da integração com parceiros..</param>
@@ -112,12 +112,12 @@ namespace IO.Swagger.Model
         /// <param name="Transactions">Lista de transações de pagamento (ou outros tipos) efetuadas no pedido. (required).</param>
         /// <param name="Price">Valor total do pedido. Exemplo: O valor de R$ 10,00 é representado como 1000. (required).</param>
         /// <param name="Remaining">Valor restante do pagamento do pedido.Exemplo: O valor de R$ 10,00 é representado como 1000. (required).</param>
-        public Order(string Id = default(string), string Number = default(string), string Reference = default(string), StatusEnum? Status = default(StatusEnum?), DateTime? CreatedAt = default(DateTime?), DateTime? UpdatedAt = default(DateTime?), List<OrdersItems> Items = default(List<OrdersItems>), string Notes = default(string), List<OrdersTransactions> Transactions = default(List<OrdersTransactions>), int? Price = default(int?), int? Remaining = default(int?))
+        public Body(string Id = default(string), string Number = default(string), string Reference = default(string), StatusEnum? Status = default(StatusEnum?), DateTime? CreatedAt = default(DateTime?), DateTime? UpdatedAt = default(DateTime?), List<OrdersItems> Items = default(List<OrdersItems>), string Notes = default(string), List<OrdersTransactions> Transactions = default(List<OrdersTransactions>), int? Price = default(int?), int? Remaining = default(int?))
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
             {
-                throw new InvalidDataException("Id is a required property for Order and cannot be null");
+                throw new InvalidDataException("Id is a required property for Body and cannot be null");
             }
             else
             {
@@ -126,7 +126,7 @@ namespace IO.Swagger.Model
             // to ensure "Status" is required (not null)
             if (Status == null)
             {
-                throw new InvalidDataException("Status is a required property for Order and cannot be null");
+                throw new InvalidDataException("Status is a required property for Body and cannot be null");
             }
             else
             {
@@ -135,7 +135,7 @@ namespace IO.Swagger.Model
             // to ensure "CreatedAt" is required (not null)
             if (CreatedAt == null)
             {
-                throw new InvalidDataException("CreatedAt is a required property for Order and cannot be null");
+                throw new InvalidDataException("CreatedAt is a required property for Body and cannot be null");
             }
             else
             {
@@ -144,7 +144,7 @@ namespace IO.Swagger.Model
             // to ensure "UpdatedAt" is required (not null)
             if (UpdatedAt == null)
             {
-                throw new InvalidDataException("UpdatedAt is a required property for Order and cannot be null");
+                throw new InvalidDataException("UpdatedAt is a required property for Body and cannot be null");
             }
             else
             {
@@ -153,7 +153,7 @@ namespace IO.Swagger.Model
             // to ensure "Items" is required (not null)
             if (Items == null)
             {
-                throw new InvalidDataException("Items is a required property for Order and cannot be null");
+                throw new InvalidDataException("Items is a required property for Body and cannot be null");
             }
             else
             {
@@ -162,7 +162,7 @@ namespace IO.Swagger.Model
             // to ensure "Transactions" is required (not null)
             if (Transactions == null)
             {
-                throw new InvalidDataException("Transactions is a required property for Order and cannot be null");
+                throw new InvalidDataException("Transactions is a required property for Body and cannot be null");
             }
             else
             {
@@ -171,7 +171,7 @@ namespace IO.Swagger.Model
             // to ensure "Price" is required (not null)
             if (Price == null)
             {
-                throw new InvalidDataException("Price is a required property for Order and cannot be null");
+                throw new InvalidDataException("Price is a required property for Body and cannot be null");
             }
             else
             {
@@ -180,7 +180,7 @@ namespace IO.Swagger.Model
             // to ensure "Remaining" is required (not null)
             if (Remaining == null)
             {
-                throw new InvalidDataException("Remaining is a required property for Order and cannot be null");
+                throw new InvalidDataException("Remaining is a required property for Body and cannot be null");
             }
             else
             {
@@ -269,7 +269,7 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Order {\n");
+            sb.Append("class Body {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
             sb.Append("  Reference: ").Append(Reference).Append("\n");
@@ -302,15 +302,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Order);
+            return this.Equals(obj as Body);
         }
 
         /// <summary>
-        /// Returns true if Order instances are equal
+        /// Returns true if Body instances are equal
         /// </summary>
-        /// <param name="other">Instance of Order to be compared</param>
+        /// <param name="other">Instance of Body to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Order other)
+        public bool Equals(Body other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

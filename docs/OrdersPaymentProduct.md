@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PaymentProduct
+# IO.Swagger.Model.OrdersPaymentProduct
 ## Properties
 
 Name | Type | Description | Notes

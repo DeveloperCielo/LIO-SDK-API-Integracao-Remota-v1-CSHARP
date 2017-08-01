@@ -38,7 +38,6 @@ using IO.Swagger.Api;
 using IO.Swagger.Client;
 using IO.Swagger.Model;
 ```
-
 <a name="packaging"></a>
 ## Packaging
 
@@ -68,11 +67,7 @@ namespace Example
     {
         public void main()
         {
-            
-            // Configure API key authorization: merchant-id
-            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
+
             // Configure API key authorization: access-token
             Configuration.Default.ApiKey.Add("access-token", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -81,23 +76,28 @@ namespace Example
             Configuration.Default.ApiKey.Add("client-id", "YOUR_API_KEY");
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("client-id", "Bearer");
+            // Configure API key authorization: merchant-id
+            Configuration.Default.ApiKey.Add("merchant-id", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("merchant-id", "Bearer");
 
             var apiInstance = new OrderManagementApi();
             var clientId = clientId_example;  // string | Token da aplicação (APP Token) gerado durante o processo de cadastro.
             var accessToken = accessToken_example;  // string | Token de acesso (Access Token) gerado durante o processo de cadastro.
             var merchantId = merchantId_example;  // string | Identificador do estabelecimento comercial gerado durante o processo de cadastro.
             var id = id_example;  // string | Identificador do pedido.
-            var body = new OrderItem(); // OrderItem | 
+            var body = new Body1(); // Body1 | 
 
             try
             {
-                Response result = apiInstance.OrderAddItem(clientId, accessToken, merchantId, id, body);
+                InlineResponse201 result = apiInstance.OrderAddItem(clientId, accessToken, merchantId, id, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
                 Debug.Print("Exception when calling OrderManagementApi.OrderAddItem: " + e.Message );
             }
+
         }
     }
 }
@@ -125,10 +125,21 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.Body](docs/Body.md)
+ - [Model.Body1](docs/Body1.md)
+ - [Model.Body2](docs/Body2.md)
  - [Model.Card](docs/Card.md)
  - [Model.ErrorResponse](docs/ErrorResponse.md)
+ - [Model.InlineResponse200](docs/InlineResponse200.md)
+ - [Model.InlineResponse201](docs/InlineResponse201.md)
+ - [Model.InlineResponse401](docs/InlineResponse401.md)
  - [Model.Order](docs/Order.md)
  - [Model.OrderItem](docs/OrderItem.md)
+ - [Model.OrdersCard](docs/OrdersCard.md)
+ - [Model.OrdersItems](docs/OrdersItems.md)
+ - [Model.OrdersPaymentProduct](docs/OrdersPaymentProduct.md)
+ - [Model.OrdersPaymentProductSub](docs/OrdersPaymentProductSub.md)
+ - [Model.OrdersTransactions](docs/OrdersTransactions.md)
  - [Model.PaymentProduct](docs/PaymentProduct.md)
  - [Model.Response](docs/Response.md)
  - [Model.SubPaymentProduct](docs/SubPaymentProduct.md)

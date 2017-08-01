@@ -25,10 +25,10 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// Transaction
+    /// OrdersTransactions
     /// </summary>
     [DataContract]
-    public partial class Transaction :  IEquatable<Transaction>, IValidatableObject
+    public partial class OrdersTransactions :  IEquatable<OrdersTransactions>, IValidatableObject
     {
         /// <summary>
         /// Tipo da transação.
@@ -91,12 +91,12 @@ namespace IO.Swagger.Model
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Transaction" /> class.
+        /// Initializes a new instance of the <see cref="OrdersTransactions" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected Transaction() { }
+        protected OrdersTransactions() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Transaction" /> class.
+        /// Initializes a new instance of the <see cref="OrdersTransactions" /> class.
         /// </summary>
         /// <param name="Id">UUID que identifica unicamente a transação. (required).</param>
         /// <param name="TransactionType">Tipo da transação. (required).</param>
@@ -110,12 +110,12 @@ namespace IO.Swagger.Model
         /// <param name="Amount">Valor da transação. Exemplo: O valor de R$ 10,00 é representado como 1000. (required).</param>
         /// <param name="CreatedAt">Data da criação/inclusão do item no pedido. A data deve estar no formato: YYYY-MM-DDThh:mm:ssZ (Exemplo: 20151020T13:13:29.000Z) (required).</param>
         /// <param name="UpdatedAt">Data da última atualização do item no pedido. A data deve estar no formato: YYYY-MM-DDThh:mm:ssZ (Exemplo: 20151020T13:13:29.000Z) (required).</param>
-        public Transaction(string Id = default(string), TransactionTypeEnum? TransactionType = default(TransactionTypeEnum?), StatusEnum? Status = default(StatusEnum?), string Description = default(string), int? TerminalNumber = default(int?), OrdersCard Card = default(OrdersCard), int? Number = default(int?), string AuthorizationCode = default(string), OrdersPaymentProduct PaymentProduct = default(OrdersPaymentProduct), string Amount = default(string), DateTime? CreatedAt = default(DateTime?), DateTime? UpdatedAt = default(DateTime?))
+        public OrdersTransactions(string Id = default(string), TransactionTypeEnum? TransactionType = default(TransactionTypeEnum?), StatusEnum? Status = default(StatusEnum?), string Description = default(string), int? TerminalNumber = default(int?), OrdersCard Card = default(OrdersCard), int? Number = default(int?), string AuthorizationCode = default(string), OrdersPaymentProduct PaymentProduct = default(OrdersPaymentProduct), string Amount = default(string), DateTime? CreatedAt = default(DateTime?), DateTime? UpdatedAt = default(DateTime?))
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
             {
-                throw new InvalidDataException("Id is a required property for Transaction and cannot be null");
+                throw new InvalidDataException("Id is a required property for OrdersTransactions and cannot be null");
             }
             else
             {
@@ -124,7 +124,7 @@ namespace IO.Swagger.Model
             // to ensure "TransactionType" is required (not null)
             if (TransactionType == null)
             {
-                throw new InvalidDataException("TransactionType is a required property for Transaction and cannot be null");
+                throw new InvalidDataException("TransactionType is a required property for OrdersTransactions and cannot be null");
             }
             else
             {
@@ -133,7 +133,7 @@ namespace IO.Swagger.Model
             // to ensure "Status" is required (not null)
             if (Status == null)
             {
-                throw new InvalidDataException("Status is a required property for Transaction and cannot be null");
+                throw new InvalidDataException("Status is a required property for OrdersTransactions and cannot be null");
             }
             else
             {
@@ -142,7 +142,7 @@ namespace IO.Swagger.Model
             // to ensure "TerminalNumber" is required (not null)
             if (TerminalNumber == null)
             {
-                throw new InvalidDataException("TerminalNumber is a required property for Transaction and cannot be null");
+                throw new InvalidDataException("TerminalNumber is a required property for OrdersTransactions and cannot be null");
             }
             else
             {
@@ -151,7 +151,7 @@ namespace IO.Swagger.Model
             // to ensure "Number" is required (not null)
             if (Number == null)
             {
-                throw new InvalidDataException("Number is a required property for Transaction and cannot be null");
+                throw new InvalidDataException("Number is a required property for OrdersTransactions and cannot be null");
             }
             else
             {
@@ -160,7 +160,7 @@ namespace IO.Swagger.Model
             // to ensure "AuthorizationCode" is required (not null)
             if (AuthorizationCode == null)
             {
-                throw new InvalidDataException("AuthorizationCode is a required property for Transaction and cannot be null");
+                throw new InvalidDataException("AuthorizationCode is a required property for OrdersTransactions and cannot be null");
             }
             else
             {
@@ -169,7 +169,7 @@ namespace IO.Swagger.Model
             // to ensure "Amount" is required (not null)
             if (Amount == null)
             {
-                throw new InvalidDataException("Amount is a required property for Transaction and cannot be null");
+                throw new InvalidDataException("Amount is a required property for OrdersTransactions and cannot be null");
             }
             else
             {
@@ -178,7 +178,7 @@ namespace IO.Swagger.Model
             // to ensure "CreatedAt" is required (not null)
             if (CreatedAt == null)
             {
-                throw new InvalidDataException("CreatedAt is a required property for Transaction and cannot be null");
+                throw new InvalidDataException("CreatedAt is a required property for OrdersTransactions and cannot be null");
             }
             else
             {
@@ -187,7 +187,7 @@ namespace IO.Swagger.Model
             // to ensure "UpdatedAt" is required (not null)
             if (UpdatedAt == null)
             {
-                throw new InvalidDataException("UpdatedAt is a required property for Transaction and cannot be null");
+                throw new InvalidDataException("UpdatedAt is a required property for OrdersTransactions and cannot be null");
             }
             else
             {
@@ -275,7 +275,7 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Transaction {\n");
+            sb.Append("class OrdersTransactions {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  TransactionType: ").Append(TransactionType).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -309,15 +309,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Transaction);
+            return this.Equals(obj as OrdersTransactions);
         }
 
         /// <summary>
-        /// Returns true if Transaction instances are equal
+        /// Returns true if OrdersTransactions instances are equal
         /// </summary>
-        /// <param name="other">Instance of Transaction to be compared</param>
+        /// <param name="other">Instance of OrdersTransactions to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Transaction other)
+        public bool Equals(OrdersTransactions other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

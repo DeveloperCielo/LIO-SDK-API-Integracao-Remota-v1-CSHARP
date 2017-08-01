@@ -28,7 +28,7 @@ namespace IO.Swagger.Model
     /// Informações sobre o cartão utilizado na transação.
     /// </summary>
     [DataContract]
-    public partial class Card :  IEquatable<Card>, IValidatableObject
+    public partial class OrdersCard :  IEquatable<OrdersCard>, IValidatableObject
     {
         /// <summary>
         /// Bandeira do cartão.
@@ -82,22 +82,22 @@ namespace IO.Swagger.Model
         [DataMember(Name="brand", EmitDefaultValue=false)]
         public BrandEnum? Brand { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Card" /> class.
+        /// Initializes a new instance of the <see cref="OrdersCard" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected Card() { }
+        protected OrdersCard() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Card" /> class.
+        /// Initializes a new instance of the <see cref="OrdersCard" /> class.
         /// </summary>
         /// <param name="Brand">Bandeira do cartão. (required).</param>
         /// <param name="Bin">Bin (primeiros 6 dígitos) do cartão. (required).</param>
         /// <param name="Last">Last (últimos 4 dígitos) do cartão. (required).</param>
-        public Card(BrandEnum? Brand = default(BrandEnum?), int? Bin = default(int?), int? Last = default(int?))
+        public OrdersCard(BrandEnum? Brand = default(BrandEnum?), int? Bin = default(int?), int? Last = default(int?))
         {
             // to ensure "Brand" is required (not null)
             if (Brand == null)
             {
-                throw new InvalidDataException("Brand is a required property for Card and cannot be null");
+                throw new InvalidDataException("Brand is a required property for OrdersCard and cannot be null");
             }
             else
             {
@@ -106,7 +106,7 @@ namespace IO.Swagger.Model
             // to ensure "Bin" is required (not null)
             if (Bin == null)
             {
-                throw new InvalidDataException("Bin is a required property for Card and cannot be null");
+                throw new InvalidDataException("Bin is a required property for OrdersCard and cannot be null");
             }
             else
             {
@@ -115,7 +115,7 @@ namespace IO.Swagger.Model
             // to ensure "Last" is required (not null)
             if (Last == null)
             {
-                throw new InvalidDataException("Last is a required property for Card and cannot be null");
+                throw new InvalidDataException("Last is a required property for OrdersCard and cannot be null");
             }
             else
             {
@@ -145,7 +145,7 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Card {\n");
+            sb.Append("class OrdersCard {\n");
             sb.Append("  Brand: ").Append(Brand).Append("\n");
             sb.Append("  Bin: ").Append(Bin).Append("\n");
             sb.Append("  Last: ").Append(Last).Append("\n");
@@ -170,15 +170,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Card);
+            return this.Equals(obj as OrdersCard);
         }
 
         /// <summary>
-        /// Returns true if Card instances are equal
+        /// Returns true if OrdersCard instances are equal
         /// </summary>
-        /// <param name="other">Instance of Card to be compared</param>
+        /// <param name="other">Instance of OrdersCard to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Card other)
+        public bool Equals(OrdersCard other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

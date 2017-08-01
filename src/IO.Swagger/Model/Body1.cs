@@ -25,10 +25,10 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// OrderItem
+    /// Body1
     /// </summary>
     [DataContract]
-    public partial class OrderItem :  IEquatable<OrderItem>, IValidatableObject
+    public partial class Body1 :  IEquatable<Body1>, IValidatableObject
     {
         /// <summary>
         /// Unidade de medida.
@@ -94,12 +94,12 @@ namespace IO.Swagger.Model
         [DataMember(Name="unit_of_measure", EmitDefaultValue=false)]
         public UnitOfMeasureEnum? UnitOfMeasure { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrderItem" /> class.
+        /// Initializes a new instance of the <see cref="Body1" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected OrderItem() { }
+        protected Body1() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrderItem" /> class.
+        /// Initializes a new instance of the <see cref="Body1" /> class.
         /// </summary>
         /// <param name="Sku">SKU do produto - identificação única do produto, preferencialmente usando identificações do mercado para o produto, como: &lt;br&gt; - Universal Product Code (UPC),&lt;br&gt; - International Article Number (EAN),&lt;br&gt; - Global Trade Item Number (GTIN),&lt;br&gt; - Australian Product Number (APN),&lt;br&gt; - Outros.&lt;br&gt; Caso seu produto não tenha uma identificação global, utilize informe um ID único proprietário para esse produto. (required).</param>
         /// <param name="SkuType">Tipo de SKU informado, por exemplo:&lt;br&gt; - PTY - para proprietário - ou seja, quando o SKU for sua identificação proprietária.&lt;br&gt; - UPC - Universal Product Code.&lt;br&gt; - EAN - International Article Number.&lt;br&gt; - GTIN - Global Trade Item Number.&lt;br&gt; - APN - Australian Product Number. (required).</param>
@@ -111,12 +111,12 @@ namespace IO.Swagger.Model
         /// <param name="Details">Detalhes do produto..</param>
         /// <param name="CreatedAt">Data da criação/inclusão do item no pedido. A data deve estar no formato: YYYY-MM-DDThh:mm:ssZ (Exemplo: 20151020T13:13:29.000Z) (required).</param>
         /// <param name="UpdatedAt">Data da última atualização do item no pedido. A data deve estar no formato: YYYY-MM-DDThh:mm:ssZ (Exemplo: 20151020T13:13:29.000Z) (required).</param>
-        public OrderItem(string Sku = default(string), string SkuType = default(string), string Name = default(string), string Description = default(string), int? UnitPrice = default(int?), int? Quantity = default(int?), UnitOfMeasureEnum? UnitOfMeasure = default(UnitOfMeasureEnum?), string Details = default(string), DateTime? CreatedAt = default(DateTime?), DateTime? UpdatedAt = default(DateTime?))
+        public Body1(string Sku = default(string), string SkuType = default(string), string Name = default(string), string Description = default(string), int? UnitPrice = default(int?), int? Quantity = default(int?), UnitOfMeasureEnum? UnitOfMeasure = default(UnitOfMeasureEnum?), string Details = default(string), DateTime? CreatedAt = default(DateTime?), DateTime? UpdatedAt = default(DateTime?))
         {
             // to ensure "Sku" is required (not null)
             if (Sku == null)
             {
-                throw new InvalidDataException("Sku is a required property for OrderItem and cannot be null");
+                throw new InvalidDataException("Sku is a required property for Body1 and cannot be null");
             }
             else
             {
@@ -125,7 +125,7 @@ namespace IO.Swagger.Model
             // to ensure "SkuType" is required (not null)
             if (SkuType == null)
             {
-                throw new InvalidDataException("SkuType is a required property for OrderItem and cannot be null");
+                throw new InvalidDataException("SkuType is a required property for Body1 and cannot be null");
             }
             else
             {
@@ -134,7 +134,7 @@ namespace IO.Swagger.Model
             // to ensure "UnitPrice" is required (not null)
             if (UnitPrice == null)
             {
-                throw new InvalidDataException("UnitPrice is a required property for OrderItem and cannot be null");
+                throw new InvalidDataException("UnitPrice is a required property for Body1 and cannot be null");
             }
             else
             {
@@ -143,7 +143,7 @@ namespace IO.Swagger.Model
             // to ensure "UnitOfMeasure" is required (not null)
             if (UnitOfMeasure == null)
             {
-                throw new InvalidDataException("UnitOfMeasure is a required property for OrderItem and cannot be null");
+                throw new InvalidDataException("UnitOfMeasure is a required property for Body1 and cannot be null");
             }
             else
             {
@@ -152,7 +152,7 @@ namespace IO.Swagger.Model
             // to ensure "CreatedAt" is required (not null)
             if (CreatedAt == null)
             {
-                throw new InvalidDataException("CreatedAt is a required property for OrderItem and cannot be null");
+                throw new InvalidDataException("CreatedAt is a required property for Body1 and cannot be null");
             }
             else
             {
@@ -161,7 +161,7 @@ namespace IO.Swagger.Model
             // to ensure "UpdatedAt" is required (not null)
             if (UpdatedAt == null)
             {
-                throw new InvalidDataException("UpdatedAt is a required property for OrderItem and cannot be null");
+                throw new InvalidDataException("UpdatedAt is a required property for Body1 and cannot be null");
             }
             else
             {
@@ -244,7 +244,7 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class OrderItem {\n");
+            sb.Append("class Body1 {\n");
             sb.Append("  Sku: ").Append(Sku).Append("\n");
             sb.Append("  SkuType: ").Append(SkuType).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -276,15 +276,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OrderItem);
+            return this.Equals(obj as Body1);
         }
 
         /// <summary>
-        /// Returns true if OrderItem instances are equal
+        /// Returns true if Body1 instances are equal
         /// </summary>
-        /// <param name="other">Instance of OrderItem to be compared</param>
+        /// <param name="other">Instance of Body1 to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OrderItem other)
+        public bool Equals(Body1 other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

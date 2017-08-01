@@ -25,35 +25,56 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// ErrorResponse
+    /// Produto secundário.
     /// </summary>
     [DataContract]
-    public partial class ErrorResponse :  IEquatable<ErrorResponse>, IValidatableObject
+    public partial class OrdersPaymentProductSub :  IEquatable<OrdersPaymentProductSub>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ErrorResponse" /> class.
+        /// Initializes a new instance of the <see cref="OrdersPaymentProductSub" /> class.
         /// </summary>
-        /// <param name="Code">Código de erro da aplicação..</param>
-        /// <param name="Detail">Detalhe do erro da aplicação..</param>
-        public ErrorResponse(string Code = default(string), string Detail = default(string))
+        [JsonConstructorAttribute]
+        protected OrdersPaymentProductSub() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrdersPaymentProductSub" /> class.
+        /// </summary>
+        /// <param name="Number">Identificação numérica do produto primário da Cielo. (required).</param>
+        /// <param name="Name">Nome do produto primário utilizado. (required).</param>
+        public OrdersPaymentProductSub(int? Number = default(int?), string Name = default(string))
         {
-            this.Code = Code;
-            this.Detail = Detail;
+            // to ensure "Number" is required (not null)
+            if (Number == null)
+            {
+                throw new InvalidDataException("Number is a required property for OrdersPaymentProductSub and cannot be null");
+            }
+            else
+            {
+                this.Number = Number;
+            }
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for OrdersPaymentProductSub and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
         }
         
         /// <summary>
-        /// Código de erro da aplicação.
+        /// Identificação numérica do produto primário da Cielo.
         /// </summary>
-        /// <value>Código de erro da aplicação.</value>
-        [DataMember(Name="code", EmitDefaultValue=false)]
-        public string Code { get; set; }
+        /// <value>Identificação numérica do produto primário da Cielo.</value>
+        [DataMember(Name="number", EmitDefaultValue=false)]
+        public int? Number { get; set; }
 
         /// <summary>
-        /// Detalhe do erro da aplicação.
+        /// Nome do produto primário utilizado.
         /// </summary>
-        /// <value>Detalhe do erro da aplicação.</value>
-        [DataMember(Name="detail", EmitDefaultValue=false)]
-        public string Detail { get; set; }
+        /// <value>Nome do produto primário utilizado.</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +83,9 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ErrorResponse {\n");
-            sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Detail: ").Append(Detail).Append("\n");
+            sb.Append("class OrdersPaymentProductSub {\n");
+            sb.Append("  Number: ").Append(Number).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -86,15 +107,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ErrorResponse);
+            return this.Equals(obj as OrdersPaymentProductSub);
         }
 
         /// <summary>
-        /// Returns true if ErrorResponse instances are equal
+        /// Returns true if OrdersPaymentProductSub instances are equal
         /// </summary>
-        /// <param name="other">Instance of ErrorResponse to be compared</param>
+        /// <param name="other">Instance of OrdersPaymentProductSub to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ErrorResponse other)
+        public bool Equals(OrdersPaymentProductSub other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -102,14 +123,14 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Code == other.Code ||
-                    this.Code != null &&
-                    this.Code.Equals(other.Code)
+                    this.Number == other.Number ||
+                    this.Number != null &&
+                    this.Number.Equals(other.Number)
                 ) && 
                 (
-                    this.Detail == other.Detail ||
-                    this.Detail != null &&
-                    this.Detail.Equals(other.Detail)
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
                 );
         }
 
@@ -124,10 +145,10 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Code != null)
-                    hash = hash * 59 + this.Code.GetHashCode();
-                if (this.Detail != null)
-                    hash = hash * 59 + this.Detail.GetHashCode();
+                if (this.Number != null)
+                    hash = hash * 59 + this.Number.GetHashCode();
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
                 return hash;
             }
         }

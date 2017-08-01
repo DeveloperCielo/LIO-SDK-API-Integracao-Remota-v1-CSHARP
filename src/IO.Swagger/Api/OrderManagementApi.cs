@@ -36,8 +36,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Response</returns>
-        Response OrderAddItem (string clientId, string accessToken, string merchantId, string id, OrderItem body);
+        /// <returns>InlineResponse201</returns>
+        InlineResponse201 OrderAddItem (string clientId, string accessToken, string merchantId, string id, Body1 body);
 
         /// <summary>
         /// 
@@ -51,8 +51,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of Response</returns>
-        ApiResponse<Response> OrderAddItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, OrderItem body);
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        ApiResponse<InlineResponse201> OrderAddItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, Body1 body);
         /// <summary>
         /// 
         /// </summary>
@@ -64,8 +64,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="body"></param>
-        /// <returns>Response</returns>
-        Response OrderCreate (string clientId, string accessToken, string merchantId, Order body);
+        /// <returns>InlineResponse201</returns>
+        InlineResponse201 OrderCreate (string clientId, string accessToken, string merchantId, Body body);
 
         /// <summary>
         /// 
@@ -78,8 +78,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of Response</returns>
-        ApiResponse<Response> OrderCreateWithHttpInfo (string clientId, string accessToken, string merchantId, Order body);
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        ApiResponse<InlineResponse201> OrderCreateWithHttpInfo (string clientId, string accessToken, string merchantId, Body body);
         /// <summary>
         /// 
         /// </summary>
@@ -119,8 +119,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
-        /// <returns>Response</returns>
-        Response OrderDeleteItem (string clientId, string accessToken, string merchantId, string id, string itemId);
+        /// <returns>InlineResponse201</returns>
+        InlineResponse201 OrderDeleteItem (string clientId, string accessToken, string merchantId, string id, string itemId);
 
         /// <summary>
         /// 
@@ -134,8 +134,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
-        /// <returns>ApiResponse of Response</returns>
-        ApiResponse<Response> OrderDeleteItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId);
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        ApiResponse<InlineResponse201> OrderDeleteItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId);
         /// <summary>
         /// 
         /// </summary>
@@ -147,8 +147,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Order</returns>
-        Order OrderGet (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>InlineResponse200</returns>
+        InlineResponse200 OrderGet (string clientId, string accessToken, string merchantId, string id);
 
         /// <summary>
         /// 
@@ -161,8 +161,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>ApiResponse of Order</returns>
-        ApiResponse<Order> OrderGetWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>ApiResponse of InlineResponse200</returns>
+        ApiResponse<InlineResponse200> OrderGetWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
         /// <summary>
         /// 
         /// </summary>
@@ -174,8 +174,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="parameters">Parâmetros para filtrar a consulta. Os possíveis parâmetros são: number (Número do pedidos), reference (Referência do pedido) e status (Status do pedidos: DRAFT, ENTERED, CANCELED, PAID, APPROVED, REJECTED, RE-ENTERED e CLOSED).</param>
-        /// <returns></returns>
-        void OrderGetByParameters (string clientId, string accessToken, string merchantId, string parameters);
+        /// <returns>List&lt;InlineResponse200&gt;</returns>
+        List<InlineResponse200> OrderGetByParameters (string clientId, string accessToken, string merchantId, string parameters);
 
         /// <summary>
         /// 
@@ -188,8 +188,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="parameters">Parâmetros para filtrar a consulta. Os possíveis parâmetros são: number (Número do pedidos), reference (Referência do pedido) e status (Status do pedidos: DRAFT, ENTERED, CANCELED, PAID, APPROVED, REJECTED, RE-ENTERED e CLOSED).</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> OrderGetByParametersWithHttpInfo (string clientId, string accessToken, string merchantId, string parameters);
+        /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
+        ApiResponse<List<InlineResponse200>> OrderGetByParametersWithHttpInfo (string clientId, string accessToken, string merchantId, string parameters);
         /// <summary>
         /// 
         /// </summary>
@@ -201,8 +201,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>OrderItem</returns>
-        OrderItem OrderGetItem (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>OrdersItems</returns>
+        OrdersItems OrderGetItem (string clientId, string accessToken, string merchantId, string id);
 
         /// <summary>
         /// 
@@ -215,8 +215,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>ApiResponse of OrderItem</returns>
-        ApiResponse<OrderItem> OrderGetItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>ApiResponse of OrdersItems</returns>
+        ApiResponse<OrdersItems> OrderGetItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
         /// <summary>
         /// 
         /// </summary>
@@ -228,8 +228,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Transaction</returns>
-        Transaction OrderGetTransactions (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>OrdersTransactions</returns>
+        OrdersTransactions OrderGetTransactions (string clientId, string accessToken, string merchantId, string id);
 
         /// <summary>
         /// 
@@ -242,8 +242,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>ApiResponse of Transaction</returns>
-        ApiResponse<Transaction> OrderGetTransactionsWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>ApiResponse of OrdersTransactions</returns>
+        ApiResponse<OrdersTransactions> OrderGetTransactionsWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
         /// <summary>
         /// 
         /// </summary>
@@ -286,8 +286,8 @@ namespace IO.Swagger.Api
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Response</returns>
-        Response OrderUpdateItem (string clientId, string accessToken, string merchantId, string id, string itemId, OrderItem body);
+        /// <returns>InlineResponse201</returns>
+        InlineResponse201 OrderUpdateItem (string clientId, string accessToken, string merchantId, string id, string itemId, Body2 body);
 
         /// <summary>
         /// 
@@ -302,8 +302,8 @@ namespace IO.Swagger.Api
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of Response</returns>
-        ApiResponse<Response> OrderUpdateItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId, OrderItem body);
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        ApiResponse<InlineResponse201> OrderUpdateItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId, Body2 body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -318,8 +318,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Task of Response</returns>
-        System.Threading.Tasks.Task<Response> OrderAddItemAsync (string clientId, string accessToken, string merchantId, string id, OrderItem body);
+        /// <returns>Task of InlineResponse201</returns>
+        System.Threading.Tasks.Task<InlineResponse201> OrderAddItemAsync (string clientId, string accessToken, string merchantId, string id, Body1 body);
 
         /// <summary>
         /// 
@@ -333,8 +333,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Response>> OrderAddItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, OrderItem body);
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> OrderAddItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, Body1 body);
         /// <summary>
         /// 
         /// </summary>
@@ -346,8 +346,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="body"></param>
-        /// <returns>Task of Response</returns>
-        System.Threading.Tasks.Task<Response> OrderCreateAsync (string clientId, string accessToken, string merchantId, Order body);
+        /// <returns>Task of InlineResponse201</returns>
+        System.Threading.Tasks.Task<InlineResponse201> OrderCreateAsync (string clientId, string accessToken, string merchantId, Body body);
 
         /// <summary>
         /// 
@@ -360,8 +360,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Response>> OrderCreateAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, Order body);
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> OrderCreateAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, Body body);
         /// <summary>
         /// 
         /// </summary>
@@ -401,8 +401,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
-        /// <returns>Task of Response</returns>
-        System.Threading.Tasks.Task<Response> OrderDeleteItemAsync (string clientId, string accessToken, string merchantId, string id, string itemId);
+        /// <returns>Task of InlineResponse201</returns>
+        System.Threading.Tasks.Task<InlineResponse201> OrderDeleteItemAsync (string clientId, string accessToken, string merchantId, string id, string itemId);
 
         /// <summary>
         /// 
@@ -416,8 +416,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
-        /// <returns>Task of ApiResponse (Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Response>> OrderDeleteItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId);
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> OrderDeleteItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId);
         /// <summary>
         /// 
         /// </summary>
@@ -429,8 +429,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of Order</returns>
-        System.Threading.Tasks.Task<Order> OrderGetAsync (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>Task of InlineResponse200</returns>
+        System.Threading.Tasks.Task<InlineResponse200> OrderGetAsync (string clientId, string accessToken, string merchantId, string id);
 
         /// <summary>
         /// 
@@ -443,8 +443,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of ApiResponse (Order)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Order>> OrderGetAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> OrderGetAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
         /// <summary>
         /// 
         /// </summary>
@@ -456,8 +456,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="parameters">Parâmetros para filtrar a consulta. Os possíveis parâmetros são: number (Número do pedidos), reference (Referência do pedido) e status (Status do pedidos: DRAFT, ENTERED, CANCELED, PAID, APPROVED, REJECTED, RE-ENTERED e CLOSED).</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task OrderGetByParametersAsync (string clientId, string accessToken, string merchantId, string parameters);
+        /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
+        System.Threading.Tasks.Task<List<InlineResponse200>> OrderGetByParametersAsync (string clientId, string accessToken, string merchantId, string parameters);
 
         /// <summary>
         /// 
@@ -470,8 +470,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="parameters">Parâmetros para filtrar a consulta. Os possíveis parâmetros são: number (Número do pedidos), reference (Referência do pedido) e status (Status do pedidos: DRAFT, ENTERED, CANCELED, PAID, APPROVED, REJECTED, RE-ENTERED e CLOSED).</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> OrderGetByParametersAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string parameters);
+        /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> OrderGetByParametersAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string parameters);
         /// <summary>
         /// 
         /// </summary>
@@ -483,8 +483,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of OrderItem</returns>
-        System.Threading.Tasks.Task<OrderItem> OrderGetItemAsync (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>Task of OrdersItems</returns>
+        System.Threading.Tasks.Task<OrdersItems> OrderGetItemAsync (string clientId, string accessToken, string merchantId, string id);
 
         /// <summary>
         /// 
@@ -497,8 +497,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of ApiResponse (OrderItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrderItem>> OrderGetItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>Task of ApiResponse (OrdersItems)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OrdersItems>> OrderGetItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
         /// <summary>
         /// 
         /// </summary>
@@ -510,8 +510,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of Transaction</returns>
-        System.Threading.Tasks.Task<Transaction> OrderGetTransactionsAsync (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>Task of OrdersTransactions</returns>
+        System.Threading.Tasks.Task<OrdersTransactions> OrderGetTransactionsAsync (string clientId, string accessToken, string merchantId, string id);
 
         /// <summary>
         /// 
@@ -524,8 +524,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of ApiResponse (Transaction)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Transaction>> OrderGetTransactionsAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
+        /// <returns>Task of ApiResponse (OrdersTransactions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OrdersTransactions>> OrderGetTransactionsAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id);
         /// <summary>
         /// 
         /// </summary>
@@ -568,8 +568,8 @@ namespace IO.Swagger.Api
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Task of Response</returns>
-        System.Threading.Tasks.Task<Response> OrderUpdateItemAsync (string clientId, string accessToken, string merchantId, string id, string itemId, OrderItem body);
+        /// <returns>Task of InlineResponse201</returns>
+        System.Threading.Tasks.Task<InlineResponse201> OrderUpdateItemAsync (string clientId, string accessToken, string merchantId, string id, string itemId, Body2 body);
 
         /// <summary>
         /// 
@@ -584,8 +584,8 @@ namespace IO.Swagger.Api
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Response>> OrderUpdateItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId, OrderItem body);
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> OrderUpdateItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId, Body2 body);
         #endregion Asynchronous Operations
     }
 
@@ -707,10 +707,10 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Response</returns>
-        public Response OrderAddItem (string clientId, string accessToken, string merchantId, string id, OrderItem body)
+        /// <returns>InlineResponse201</returns>
+        public InlineResponse201 OrderAddItem (string clientId, string accessToken, string merchantId, string id, Body1 body)
         {
-             ApiResponse<Response> localVarResponse = OrderAddItemWithHttpInfo(clientId, accessToken, merchantId, id, body);
+             ApiResponse<InlineResponse201> localVarResponse = OrderAddItemWithHttpInfo(clientId, accessToken, merchantId, id, body);
              return localVarResponse.Data;
         }
 
@@ -723,8 +723,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of Response</returns>
-        public ApiResponse< Response > OrderAddItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, OrderItem body)
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        public ApiResponse< InlineResponse201 > OrderAddItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, Body1 body)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -764,9 +764,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
@@ -780,12 +777,6 @@ namespace IO.Swagger.Api
                 localVarPostBody = body; // byte array
             }
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
-
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -796,6 +787,12 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
 
@@ -812,10 +809,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Response>(localVarStatusCode,
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)));
-            
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
         }
 
         /// <summary>
@@ -827,10 +823,10 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Task of Response</returns>
-        public async System.Threading.Tasks.Task<Response> OrderAddItemAsync (string clientId, string accessToken, string merchantId, string id, OrderItem body)
+        /// <returns>Task of InlineResponse201</returns>
+        public async System.Threading.Tasks.Task<InlineResponse201> OrderAddItemAsync (string clientId, string accessToken, string merchantId, string id, Body1 body)
         {
-             ApiResponse<Response> localVarResponse = await OrderAddItemAsyncWithHttpInfo(clientId, accessToken, merchantId, id, body);
+             ApiResponse<InlineResponse201> localVarResponse = await OrderAddItemAsyncWithHttpInfo(clientId, accessToken, merchantId, id, body);
              return localVarResponse.Data;
 
         }
@@ -844,8 +840,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Response>> OrderAddItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, OrderItem body)
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> OrderAddItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, Body1 body)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -885,9 +881,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
@@ -901,11 +894,6 @@ namespace IO.Swagger.Api
                 localVarPostBody = body; // byte array
             }
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -915,6 +903,11 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
             // make the HTTP request
@@ -930,10 +923,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Response>(localVarStatusCode,
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)));
-            
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
         }
 
         /// <summary>
@@ -944,10 +936,10 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="body"></param>
-        /// <returns>Response</returns>
-        public Response OrderCreate (string clientId, string accessToken, string merchantId, Order body)
+        /// <returns>InlineResponse201</returns>
+        public InlineResponse201 OrderCreate (string clientId, string accessToken, string merchantId, Body body)
         {
-             ApiResponse<Response> localVarResponse = OrderCreateWithHttpInfo(clientId, accessToken, merchantId, body);
+             ApiResponse<InlineResponse201> localVarResponse = OrderCreateWithHttpInfo(clientId, accessToken, merchantId, body);
              return localVarResponse.Data;
         }
 
@@ -959,8 +951,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of Response</returns>
-        public ApiResponse< Response > OrderCreateWithHttpInfo (string clientId, string accessToken, string merchantId, Order body)
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        public ApiResponse< InlineResponse201 > OrderCreateWithHttpInfo (string clientId, string accessToken, string merchantId, Body body)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -997,9 +989,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
@@ -1012,12 +1001,6 @@ namespace IO.Swagger.Api
                 localVarPostBody = body; // byte array
             }
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
-
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -1028,6 +1011,12 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
 
@@ -1044,10 +1033,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Response>(localVarStatusCode,
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)));
-            
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
         }
 
         /// <summary>
@@ -1058,10 +1046,10 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="body"></param>
-        /// <returns>Task of Response</returns>
-        public async System.Threading.Tasks.Task<Response> OrderCreateAsync (string clientId, string accessToken, string merchantId, Order body)
+        /// <returns>Task of InlineResponse201</returns>
+        public async System.Threading.Tasks.Task<InlineResponse201> OrderCreateAsync (string clientId, string accessToken, string merchantId, Body body)
         {
-             ApiResponse<Response> localVarResponse = await OrderCreateAsyncWithHttpInfo(clientId, accessToken, merchantId, body);
+             ApiResponse<InlineResponse201> localVarResponse = await OrderCreateAsyncWithHttpInfo(clientId, accessToken, merchantId, body);
              return localVarResponse.Data;
 
         }
@@ -1074,8 +1062,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Response>> OrderCreateAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, Order body)
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> OrderCreateAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, Body body)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1112,9 +1100,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
@@ -1127,11 +1112,6 @@ namespace IO.Swagger.Api
                 localVarPostBody = body; // byte array
             }
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -1141,6 +1121,11 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
             // make the HTTP request
@@ -1156,10 +1141,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Response>(localVarStatusCode,
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)));
-            
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
         }
 
         /// <summary>
@@ -1221,19 +1205,10 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
-
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
 
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
@@ -1245,6 +1220,12 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
 
@@ -1261,7 +1242,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -1327,19 +1307,11 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -1349,6 +1321,11 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
             // make the HTTP request
@@ -1364,7 +1341,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -1379,10 +1355,10 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
-        /// <returns>Response</returns>
-        public Response OrderDeleteItem (string clientId, string accessToken, string merchantId, string id, string itemId)
+        /// <returns>InlineResponse201</returns>
+        public InlineResponse201 OrderDeleteItem (string clientId, string accessToken, string merchantId, string id, string itemId)
         {
-             ApiResponse<Response> localVarResponse = OrderDeleteItemWithHttpInfo(clientId, accessToken, merchantId, id, itemId);
+             ApiResponse<InlineResponse201> localVarResponse = OrderDeleteItemWithHttpInfo(clientId, accessToken, merchantId, id, itemId);
              return localVarResponse.Data;
         }
 
@@ -1395,8 +1371,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
-        /// <returns>ApiResponse of Response</returns>
-        public ApiResponse< Response > OrderDeleteItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId)
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        public ApiResponse< InlineResponse201 > OrderDeleteItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1434,20 +1410,11 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (itemId != null) localVarPathParams.Add("itemId", Configuration.ApiClient.ParameterToString(itemId)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
-
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
 
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
@@ -1459,6 +1426,12 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
 
@@ -1475,10 +1448,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Response>(localVarStatusCode,
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)));
-            
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
         }
 
         /// <summary>
@@ -1490,10 +1462,10 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
-        /// <returns>Task of Response</returns>
-        public async System.Threading.Tasks.Task<Response> OrderDeleteItemAsync (string clientId, string accessToken, string merchantId, string id, string itemId)
+        /// <returns>Task of InlineResponse201</returns>
+        public async System.Threading.Tasks.Task<InlineResponse201> OrderDeleteItemAsync (string clientId, string accessToken, string merchantId, string id, string itemId)
         {
-             ApiResponse<Response> localVarResponse = await OrderDeleteItemAsyncWithHttpInfo(clientId, accessToken, merchantId, id, itemId);
+             ApiResponse<InlineResponse201> localVarResponse = await OrderDeleteItemAsyncWithHttpInfo(clientId, accessToken, merchantId, id, itemId);
              return localVarResponse.Data;
 
         }
@@ -1507,8 +1479,8 @@ namespace IO.Swagger.Api
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
-        /// <returns>Task of ApiResponse (Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Response>> OrderDeleteItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId)
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> OrderDeleteItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1546,20 +1518,12 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (itemId != null) localVarPathParams.Add("itemId", Configuration.ApiClient.ParameterToString(itemId)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -1569,6 +1533,11 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
             // make the HTTP request
@@ -1584,10 +1553,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Response>(localVarStatusCode,
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)));
-            
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
         }
 
         /// <summary>
@@ -1598,10 +1566,10 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Order</returns>
-        public Order OrderGet (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>InlineResponse200</returns>
+        public InlineResponse200 OrderGet (string clientId, string accessToken, string merchantId, string id)
         {
-             ApiResponse<Order> localVarResponse = OrderGetWithHttpInfo(clientId, accessToken, merchantId, id);
+             ApiResponse<InlineResponse200> localVarResponse = OrderGetWithHttpInfo(clientId, accessToken, merchantId, id);
              return localVarResponse.Data;
         }
 
@@ -1613,8 +1581,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>ApiResponse of Order</returns>
-        public ApiResponse< Order > OrderGetWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>ApiResponse of InlineResponse200</returns>
+        public ApiResponse< InlineResponse200 > OrderGetWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1650,19 +1618,10 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
-
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
 
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
@@ -1674,6 +1633,12 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
 
@@ -1690,10 +1655,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Order>(localVarStatusCode,
+            return new ApiResponse<InlineResponse200>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Order) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Order)));
-            
+                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
         }
 
         /// <summary>
@@ -1704,10 +1668,10 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of Order</returns>
-        public async System.Threading.Tasks.Task<Order> OrderGetAsync (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>Task of InlineResponse200</returns>
+        public async System.Threading.Tasks.Task<InlineResponse200> OrderGetAsync (string clientId, string accessToken, string merchantId, string id)
         {
-             ApiResponse<Order> localVarResponse = await OrderGetAsyncWithHttpInfo(clientId, accessToken, merchantId, id);
+             ApiResponse<InlineResponse200> localVarResponse = await OrderGetAsyncWithHttpInfo(clientId, accessToken, merchantId, id);
              return localVarResponse.Data;
 
         }
@@ -1720,8 +1684,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of ApiResponse (Order)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Order>> OrderGetAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> OrderGetAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1757,19 +1721,11 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -1779,6 +1735,11 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
             // make the HTTP request
@@ -1794,10 +1755,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Order>(localVarStatusCode,
+            return new ApiResponse<InlineResponse200>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Order) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Order)));
-            
+                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
         }
 
         /// <summary>
@@ -1808,10 +1768,11 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="parameters">Parâmetros para filtrar a consulta. Os possíveis parâmetros são: number (Número do pedidos), reference (Referência do pedido) e status (Status do pedidos: DRAFT, ENTERED, CANCELED, PAID, APPROVED, REJECTED, RE-ENTERED e CLOSED).</param>
-        /// <returns></returns>
-        public void OrderGetByParameters (string clientId, string accessToken, string merchantId, string parameters)
+        /// <returns>List&lt;InlineResponse200&gt;</returns>
+        public List<InlineResponse200> OrderGetByParameters (string clientId, string accessToken, string merchantId, string parameters)
         {
-             OrderGetByParametersWithHttpInfo(clientId, accessToken, merchantId, parameters);
+             ApiResponse<List<InlineResponse200>> localVarResponse = OrderGetByParametersWithHttpInfo(clientId, accessToken, merchantId, parameters);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1822,8 +1783,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="parameters">Parâmetros para filtrar a consulta. Os possíveis parâmetros são: number (Número do pedidos), reference (Referência do pedido) e status (Status do pedidos: DRAFT, ENTERED, CANCELED, PAID, APPROVED, REJECTED, RE-ENTERED e CLOSED).</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> OrderGetByParametersWithHttpInfo (string clientId, string accessToken, string merchantId, string parameters)
+        /// <returns>ApiResponse of List&lt;InlineResponse200&gt;</returns>
+        public ApiResponse< List<InlineResponse200> > OrderGetByParametersWithHttpInfo (string clientId, string accessToken, string merchantId, string parameters)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1858,19 +1819,10 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (parameters != null) localVarQueryParams.Add("parameters", Configuration.ApiClient.ParameterToString(parameters)); // query parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
-
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
 
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
@@ -1882,6 +1834,12 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
 
@@ -1898,10 +1856,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<List<InlineResponse200>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (List<InlineResponse200>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse200>)));
         }
 
         /// <summary>
@@ -1912,10 +1869,11 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="parameters">Parâmetros para filtrar a consulta. Os possíveis parâmetros são: number (Número do pedidos), reference (Referência do pedido) e status (Status do pedidos: DRAFT, ENTERED, CANCELED, PAID, APPROVED, REJECTED, RE-ENTERED e CLOSED).</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task OrderGetByParametersAsync (string clientId, string accessToken, string merchantId, string parameters)
+        /// <returns>Task of List&lt;InlineResponse200&gt;</returns>
+        public async System.Threading.Tasks.Task<List<InlineResponse200>> OrderGetByParametersAsync (string clientId, string accessToken, string merchantId, string parameters)
         {
-             await OrderGetByParametersAsyncWithHttpInfo(clientId, accessToken, merchantId, parameters);
+             ApiResponse<List<InlineResponse200>> localVarResponse = await OrderGetByParametersAsyncWithHttpInfo(clientId, accessToken, merchantId, parameters);
+             return localVarResponse.Data;
 
         }
 
@@ -1927,8 +1885,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="parameters">Parâmetros para filtrar a consulta. Os possíveis parâmetros são: number (Número do pedidos), reference (Referência do pedido) e status (Status do pedidos: DRAFT, ENTERED, CANCELED, PAID, APPROVED, REJECTED, RE-ENTERED e CLOSED).</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> OrderGetByParametersAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string parameters)
+        /// <returns>Task of ApiResponse (List&lt;InlineResponse200&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse200>>> OrderGetByParametersAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string parameters)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1963,19 +1921,11 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (parameters != null) localVarQueryParams.Add("parameters", Configuration.ApiClient.ParameterToString(parameters)); // query parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -1985,6 +1935,11 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
             // make the HTTP request
@@ -2000,10 +1955,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<List<InlineResponse200>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (List<InlineResponse200>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse200>)));
         }
 
         /// <summary>
@@ -2014,10 +1968,10 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>OrderItem</returns>
-        public OrderItem OrderGetItem (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>OrdersItems</returns>
+        public OrdersItems OrderGetItem (string clientId, string accessToken, string merchantId, string id)
         {
-             ApiResponse<OrderItem> localVarResponse = OrderGetItemWithHttpInfo(clientId, accessToken, merchantId, id);
+             ApiResponse<OrdersItems> localVarResponse = OrderGetItemWithHttpInfo(clientId, accessToken, merchantId, id);
              return localVarResponse.Data;
         }
 
@@ -2029,8 +1983,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>ApiResponse of OrderItem</returns>
-        public ApiResponse< OrderItem > OrderGetItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>ApiResponse of OrdersItems</returns>
+        public ApiResponse< OrdersItems > OrderGetItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -2066,19 +2020,10 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
-
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
 
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
@@ -2090,6 +2035,12 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
 
@@ -2106,10 +2057,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<OrderItem>(localVarStatusCode,
+            return new ApiResponse<OrdersItems>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrderItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderItem)));
-            
+                (OrdersItems) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrdersItems)));
         }
 
         /// <summary>
@@ -2120,10 +2070,10 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of OrderItem</returns>
-        public async System.Threading.Tasks.Task<OrderItem> OrderGetItemAsync (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>Task of OrdersItems</returns>
+        public async System.Threading.Tasks.Task<OrdersItems> OrderGetItemAsync (string clientId, string accessToken, string merchantId, string id)
         {
-             ApiResponse<OrderItem> localVarResponse = await OrderGetItemAsyncWithHttpInfo(clientId, accessToken, merchantId, id);
+             ApiResponse<OrdersItems> localVarResponse = await OrderGetItemAsyncWithHttpInfo(clientId, accessToken, merchantId, id);
              return localVarResponse.Data;
 
         }
@@ -2136,8 +2086,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of ApiResponse (OrderItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrderItem>> OrderGetItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>Task of ApiResponse (OrdersItems)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OrdersItems>> OrderGetItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -2173,19 +2123,11 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -2195,6 +2137,11 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
             // make the HTTP request
@@ -2210,10 +2157,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<OrderItem>(localVarStatusCode,
+            return new ApiResponse<OrdersItems>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (OrderItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrderItem)));
-            
+                (OrdersItems) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrdersItems)));
         }
 
         /// <summary>
@@ -2224,10 +2170,10 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Transaction</returns>
-        public Transaction OrderGetTransactions (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>OrdersTransactions</returns>
+        public OrdersTransactions OrderGetTransactions (string clientId, string accessToken, string merchantId, string id)
         {
-             ApiResponse<Transaction> localVarResponse = OrderGetTransactionsWithHttpInfo(clientId, accessToken, merchantId, id);
+             ApiResponse<OrdersTransactions> localVarResponse = OrderGetTransactionsWithHttpInfo(clientId, accessToken, merchantId, id);
              return localVarResponse.Data;
         }
 
@@ -2239,8 +2185,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>ApiResponse of Transaction</returns>
-        public ApiResponse< Transaction > OrderGetTransactionsWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>ApiResponse of OrdersTransactions</returns>
+        public ApiResponse< OrdersTransactions > OrderGetTransactionsWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -2276,19 +2222,10 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
-
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
 
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
@@ -2300,6 +2237,12 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
 
@@ -2316,10 +2259,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Transaction>(localVarStatusCode,
+            return new ApiResponse<OrdersTransactions>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Transaction) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Transaction)));
-            
+                (OrdersTransactions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrdersTransactions)));
         }
 
         /// <summary>
@@ -2330,10 +2272,10 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of Transaction</returns>
-        public async System.Threading.Tasks.Task<Transaction> OrderGetTransactionsAsync (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>Task of OrdersTransactions</returns>
+        public async System.Threading.Tasks.Task<OrdersTransactions> OrderGetTransactionsAsync (string clientId, string accessToken, string merchantId, string id)
         {
-             ApiResponse<Transaction> localVarResponse = await OrderGetTransactionsAsyncWithHttpInfo(clientId, accessToken, merchantId, id);
+             ApiResponse<OrdersTransactions> localVarResponse = await OrderGetTransactionsAsyncWithHttpInfo(clientId, accessToken, merchantId, id);
              return localVarResponse.Data;
 
         }
@@ -2346,8 +2288,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Token de acesso (Access Token) gerado durante o processo de cadastro.</param>
         /// <param name="merchantId">Identificador do estabelecimento comercial gerado durante o processo de cadastro.</param>
         /// <param name="id">Identificador do pedido.</param>
-        /// <returns>Task of ApiResponse (Transaction)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Transaction>> OrderGetTransactionsAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
+        /// <returns>Task of ApiResponse (OrdersTransactions)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OrdersTransactions>> OrderGetTransactionsAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -2383,19 +2325,11 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -2405,6 +2339,11 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
             // make the HTTP request
@@ -2420,10 +2359,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Transaction>(localVarStatusCode,
+            return new ApiResponse<OrdersTransactions>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Transaction) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Transaction)));
-            
+                (OrdersTransactions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrdersTransactions)));
         }
 
         /// <summary>
@@ -2489,20 +2427,11 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (operation != null) localVarQueryParams.Add("operation", Configuration.ApiClient.ParameterToString(operation)); // query parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
-
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
 
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
@@ -2514,6 +2443,12 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
 
@@ -2530,7 +2465,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -2600,20 +2534,12 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (operation != null) localVarQueryParams.Add("operation", Configuration.ApiClient.ParameterToString(operation)); // query parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
             if (accessToken != null) localVarHeaderParams.Add("access-token", Configuration.ApiClient.ParameterToString(accessToken)); // header parameter
             if (merchantId != null) localVarHeaderParams.Add("merchant-id", Configuration.ApiClient.ParameterToString(merchantId)); // header parameter
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -2623,6 +2549,11 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
             // make the HTTP request
@@ -2638,7 +2569,6 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
@@ -2654,10 +2584,10 @@ namespace IO.Swagger.Api
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Response</returns>
-        public Response OrderUpdateItem (string clientId, string accessToken, string merchantId, string id, string itemId, OrderItem body)
+        /// <returns>InlineResponse201</returns>
+        public InlineResponse201 OrderUpdateItem (string clientId, string accessToken, string merchantId, string id, string itemId, Body2 body)
         {
-             ApiResponse<Response> localVarResponse = OrderUpdateItemWithHttpInfo(clientId, accessToken, merchantId, id, itemId, body);
+             ApiResponse<InlineResponse201> localVarResponse = OrderUpdateItemWithHttpInfo(clientId, accessToken, merchantId, id, itemId, body);
              return localVarResponse.Data;
         }
 
@@ -2671,8 +2601,8 @@ namespace IO.Swagger.Api
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of Response</returns>
-        public ApiResponse< Response > OrderUpdateItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId, OrderItem body)
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        public ApiResponse< InlineResponse201 > OrderUpdateItemWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId, Body2 body)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -2715,9 +2645,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (itemId != null) localVarPathParams.Add("itemId", Configuration.ApiClient.ParameterToString(itemId)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
@@ -2732,12 +2659,6 @@ namespace IO.Swagger.Api
                 localVarPostBody = body; // byte array
             }
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
-
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -2748,6 +2669,12 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
 
@@ -2764,10 +2691,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Response>(localVarStatusCode,
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)));
-            
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
         }
 
         /// <summary>
@@ -2780,10 +2706,10 @@ namespace IO.Swagger.Api
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Task of Response</returns>
-        public async System.Threading.Tasks.Task<Response> OrderUpdateItemAsync (string clientId, string accessToken, string merchantId, string id, string itemId, OrderItem body)
+        /// <returns>Task of InlineResponse201</returns>
+        public async System.Threading.Tasks.Task<InlineResponse201> OrderUpdateItemAsync (string clientId, string accessToken, string merchantId, string id, string itemId, Body2 body)
         {
-             ApiResponse<Response> localVarResponse = await OrderUpdateItemAsyncWithHttpInfo(clientId, accessToken, merchantId, id, itemId, body);
+             ApiResponse<InlineResponse201> localVarResponse = await OrderUpdateItemAsyncWithHttpInfo(clientId, accessToken, merchantId, id, itemId, body);
              return localVarResponse.Data;
 
         }
@@ -2798,8 +2724,8 @@ namespace IO.Swagger.Api
         /// <param name="id">Identificador do pedido.</param>
         /// <param name="itemId">Identificador do item do pedido.</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Response>> OrderUpdateItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId, OrderItem body)
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> OrderUpdateItemAsyncWithHttpInfo (string clientId, string accessToken, string merchantId, string id, string itemId, Body2 body)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -2842,9 +2768,6 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (itemId != null) localVarPathParams.Add("itemId", Configuration.ApiClient.ParameterToString(itemId)); // path parameter
             if (clientId != null) localVarHeaderParams.Add("client-id", Configuration.ApiClient.ParameterToString(clientId)); // header parameter
@@ -2859,11 +2782,6 @@ namespace IO.Swagger.Api
                 localVarPostBody = body; // byte array
             }
 
-            // authentication (merchant-id) required
-            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
-            {
-                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
-            }
             // authentication (access-token) required
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("access-token")))
             {
@@ -2873,6 +2791,11 @@ namespace IO.Swagger.Api
             if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("client-id")))
             {
                 localVarHeaderParams["client-id"] = Configuration.GetApiKeyWithPrefix("client-id");
+            }
+            // authentication (merchant-id) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("merchant-id")))
+            {
+                localVarHeaderParams["merchant-id"] = Configuration.GetApiKeyWithPrefix("merchant-id");
             }
 
             // make the HTTP request
@@ -2888,10 +2811,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Response>(localVarStatusCode,
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Response) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Response)));
-            
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
         }
 
     }

@@ -25,35 +25,26 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// ErrorResponse
+    /// InlineResponse201
     /// </summary>
     [DataContract]
-    public partial class ErrorResponse :  IEquatable<ErrorResponse>, IValidatableObject
+    public partial class InlineResponse201 :  IEquatable<InlineResponse201>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ErrorResponse" /> class.
+        /// Initializes a new instance of the <see cref="InlineResponse201" /> class.
         /// </summary>
-        /// <param name="Code">Código de erro da aplicação..</param>
-        /// <param name="Detail">Detalhe do erro da aplicação..</param>
-        public ErrorResponse(string Code = default(string), string Detail = default(string))
+        /// <param name="Id">Identificador do pedido..</param>
+        public InlineResponse201(string Id = default(string))
         {
-            this.Code = Code;
-            this.Detail = Detail;
+            this.Id = Id;
         }
         
         /// <summary>
-        /// Código de erro da aplicação.
+        /// Identificador do pedido.
         /// </summary>
-        /// <value>Código de erro da aplicação.</value>
-        [DataMember(Name="code", EmitDefaultValue=false)]
-        public string Code { get; set; }
-
-        /// <summary>
-        /// Detalhe do erro da aplicação.
-        /// </summary>
-        /// <value>Detalhe do erro da aplicação.</value>
-        [DataMember(Name="detail", EmitDefaultValue=false)]
-        public string Detail { get; set; }
+        /// <value>Identificador do pedido.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +53,8 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ErrorResponse {\n");
-            sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Detail: ").Append(Detail).Append("\n");
+            sb.Append("class InlineResponse201 {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -86,15 +76,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ErrorResponse);
+            return this.Equals(obj as InlineResponse201);
         }
 
         /// <summary>
-        /// Returns true if ErrorResponse instances are equal
+        /// Returns true if InlineResponse201 instances are equal
         /// </summary>
-        /// <param name="other">Instance of ErrorResponse to be compared</param>
+        /// <param name="other">Instance of InlineResponse201 to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ErrorResponse other)
+        public bool Equals(InlineResponse201 other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -102,14 +92,9 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Code == other.Code ||
-                    this.Code != null &&
-                    this.Code.Equals(other.Code)
-                ) && 
-                (
-                    this.Detail == other.Detail ||
-                    this.Detail != null &&
-                    this.Detail.Equals(other.Detail)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 );
         }
 
@@ -124,10 +109,8 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Code != null)
-                    hash = hash * 59 + this.Code.GetHashCode();
-                if (this.Detail != null)
-                    hash = hash * 59 + this.Detail.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 return hash;
             }
         }

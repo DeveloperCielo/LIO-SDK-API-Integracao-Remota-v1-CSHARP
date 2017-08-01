@@ -20,6 +20,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 
 namespace IO.Swagger.Model
 {
@@ -39,8 +40,8 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="Number">Identificação numérica do produto primário da Cielo. (required).</param>
         /// <param name="Name">Nome do produto primário utilizado. (required).</param>
-        /// <param name="Sub">Sub (required).</param>
-        public PaymentProduct(int? Number = default(int?), string Name = default(string), SubPaymentProduct Sub = default(SubPaymentProduct))
+        /// <param name="Sub">Sub.</param>
+        public PaymentProduct(int? Number = default(int?), string Name = default(string), OrdersPaymentProductSub Sub = default(OrdersPaymentProductSub))
         {
             // to ensure "Number" is required (not null)
             if (Number == null)
@@ -60,15 +61,7 @@ namespace IO.Swagger.Model
             {
                 this.Name = Name;
             }
-            // to ensure "Sub" is required (not null)
-            if (Sub == null)
-            {
-                throw new InvalidDataException("Sub is a required property for PaymentProduct and cannot be null");
-            }
-            else
-            {
-                this.Sub = Sub;
-            }
+            this.Sub = Sub;
         }
         
         /// <summary>
@@ -77,17 +70,20 @@ namespace IO.Swagger.Model
         /// <value>Identificação numérica do produto primário da Cielo.</value>
         [DataMember(Name="number", EmitDefaultValue=false)]
         public int? Number { get; set; }
+
         /// <summary>
         /// Nome do produto primário utilizado.
         /// </summary>
         /// <value>Nome do produto primário utilizado.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
         /// <summary>
         /// Gets or Sets Sub
         /// </summary>
         [DataMember(Name="sub", EmitDefaultValue=false)]
-        public SubPaymentProduct Sub { get; set; }
+        public OrdersPaymentProductSub Sub { get; set; }
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -173,8 +169,13 @@ namespace IO.Swagger.Model
             }
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        { 
+        /// <summary>
+        /// To validate all properties of the instance
+        /// </summary>
+        /// <param name="validationContext">Validation context</param>
+        /// <returns>Validation Result</returns>
+        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
             yield break;
         }
     }

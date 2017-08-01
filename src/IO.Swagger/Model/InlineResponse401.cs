@@ -25,17 +25,17 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// ErrorResponse
+    /// InlineResponse401
     /// </summary>
     [DataContract]
-    public partial class ErrorResponse :  IEquatable<ErrorResponse>, IValidatableObject
+    public partial class InlineResponse401 :  IEquatable<InlineResponse401>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ErrorResponse" /> class.
+        /// Initializes a new instance of the <see cref="InlineResponse401" /> class.
         /// </summary>
         /// <param name="Code">Código de erro da aplicação..</param>
         /// <param name="Detail">Detalhe do erro da aplicação..</param>
-        public ErrorResponse(string Code = default(string), string Detail = default(string))
+        public InlineResponse401(string Code = default(string), string Detail = default(string))
         {
             this.Code = Code;
             this.Detail = Detail;
@@ -62,7 +62,7 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ErrorResponse {\n");
+            sb.Append("class InlineResponse401 {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Detail: ").Append(Detail).Append("\n");
             sb.Append("}\n");
@@ -86,15 +86,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ErrorResponse);
+            return this.Equals(obj as InlineResponse401);
         }
 
         /// <summary>
-        /// Returns true if ErrorResponse instances are equal
+        /// Returns true if InlineResponse401 instances are equal
         /// </summary>
-        /// <param name="other">Instance of ErrorResponse to be compared</param>
+        /// <param name="other">Instance of InlineResponse401 to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ErrorResponse other)
+        public bool Equals(InlineResponse401 other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

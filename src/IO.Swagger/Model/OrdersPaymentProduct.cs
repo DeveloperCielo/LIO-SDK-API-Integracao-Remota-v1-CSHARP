@@ -25,27 +25,28 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// Produto secundário.
+    /// Informações sobre o produto de pagamento utilizado.
     /// </summary>
     [DataContract]
-    public partial class SubPaymentProduct :  IEquatable<SubPaymentProduct>, IValidatableObject
+    public partial class OrdersPaymentProduct :  IEquatable<OrdersPaymentProduct>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SubPaymentProduct" /> class.
+        /// Initializes a new instance of the <see cref="OrdersPaymentProduct" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected SubPaymentProduct() { }
+        protected OrdersPaymentProduct() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SubPaymentProduct" /> class.
+        /// Initializes a new instance of the <see cref="OrdersPaymentProduct" /> class.
         /// </summary>
         /// <param name="Number">Identificação numérica do produto primário da Cielo. (required).</param>
         /// <param name="Name">Nome do produto primário utilizado. (required).</param>
-        public SubPaymentProduct(int? Number = default(int?), string Name = default(string))
+        /// <param name="Sub">Sub.</param>
+        public OrdersPaymentProduct(int? Number = default(int?), string Name = default(string), OrdersPaymentProductSub Sub = default(OrdersPaymentProductSub))
         {
             // to ensure "Number" is required (not null)
             if (Number == null)
             {
-                throw new InvalidDataException("Number is a required property for SubPaymentProduct and cannot be null");
+                throw new InvalidDataException("Number is a required property for OrdersPaymentProduct and cannot be null");
             }
             else
             {
@@ -54,12 +55,13 @@ namespace IO.Swagger.Model
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
-                throw new InvalidDataException("Name is a required property for SubPaymentProduct and cannot be null");
+                throw new InvalidDataException("Name is a required property for OrdersPaymentProduct and cannot be null");
             }
             else
             {
                 this.Name = Name;
             }
+            this.Sub = Sub;
         }
         
         /// <summary>
@@ -77,15 +79,22 @@ namespace IO.Swagger.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or Sets Sub
+        /// </summary>
+        [DataMember(Name="sub", EmitDefaultValue=false)]
+        public OrdersPaymentProductSub Sub { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SubPaymentProduct {\n");
+            sb.Append("class OrdersPaymentProduct {\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Sub: ").Append(Sub).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,15 +116,15 @@ namespace IO.Swagger.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SubPaymentProduct);
+            return this.Equals(obj as OrdersPaymentProduct);
         }
 
         /// <summary>
-        /// Returns true if SubPaymentProduct instances are equal
+        /// Returns true if OrdersPaymentProduct instances are equal
         /// </summary>
-        /// <param name="other">Instance of SubPaymentProduct to be compared</param>
+        /// <param name="other">Instance of OrdersPaymentProduct to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SubPaymentProduct other)
+        public bool Equals(OrdersPaymentProduct other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -131,6 +140,11 @@ namespace IO.Swagger.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) && 
+                (
+                    this.Sub == other.Sub ||
+                    this.Sub != null &&
+                    this.Sub.Equals(other.Sub)
                 );
         }
 
@@ -149,6 +163,8 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.Number.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                if (this.Sub != null)
+                    hash = hash * 59 + this.Sub.GetHashCode();
                 return hash;
             }
         }

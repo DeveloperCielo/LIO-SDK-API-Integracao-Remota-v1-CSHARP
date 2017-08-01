@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Order
+# IO.Swagger.Model.Body
 ## Properties
 
 Name | Type | Description | Notes

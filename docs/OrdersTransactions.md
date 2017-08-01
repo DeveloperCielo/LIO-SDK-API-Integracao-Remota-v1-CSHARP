@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Transaction
+# IO.Swagger.Model.OrdersTransactions
 ## Properties
 
 Name | Type | Description | Notes
