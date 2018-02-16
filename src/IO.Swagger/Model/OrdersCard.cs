@@ -28,7 +28,7 @@ namespace IO.Swagger.Model
     /// Informações sobre o cartão utilizado na transação.
     /// </summary>
     [DataContract]
-    public partial class OrdersCard :  IEquatable<OrdersCard>, IValidatableObject
+    public partial class OrdersCard : IEquatable<OrdersCard>, IValidatableObject
     {
         /// <summary>
         /// Bandeira do cartão.
@@ -37,37 +37,37 @@ namespace IO.Swagger.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum BrandEnum
         {
-            
+
             /// <summary>
             /// Enum VISA for "VISA"
             /// </summary>
             [EnumMember(Value = "VISA")]
             VISA,
-            
+
             /// <summary>
             /// Enum MASTERCARD for "MASTERCARD"
             /// </summary>
             [EnumMember(Value = "MASTERCARD")]
             MASTERCARD,
-            
+
             /// <summary>
             /// Enum ELO for "ELO"
             /// </summary>
             [EnumMember(Value = "ELO")]
             ELO,
-            
+
             /// <summary>
             /// Enum DINERS for "DINERS"
             /// </summary>
             [EnumMember(Value = "DINERS")]
             DINERS,
-            
+
             /// <summary>
             /// Enum AMEX for "AMEX"
             /// </summary>
             [EnumMember(Value = "AMEX")]
             AMEX,
-            
+
             /// <summary>
             /// Enum AURA for "AURA"
             /// </summary>
@@ -79,7 +79,7 @@ namespace IO.Swagger.Model
         /// Bandeira do cartão.
         /// </summary>
         /// <value>Bandeira do cartão.</value>
-        [DataMember(Name="brand", EmitDefaultValue=false)]
+        [DataMember(Name = "brand", EmitDefaultValue = false)]
         public BrandEnum? Brand { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="OrdersCard" /> class.
@@ -92,7 +92,7 @@ namespace IO.Swagger.Model
         /// <param name="Brand">Bandeira do cartão. (required).</param>
         /// <param name="Bin">Bin (primeiros 6 dígitos) do cartão. (required).</param>
         /// <param name="Last">Last (últimos 4 dígitos) do cartão. (required).</param>
-        public OrdersCard(BrandEnum? Brand = default(BrandEnum?), int? Bin = default(int?), int? Last = default(int?))
+        public OrdersCard(BrandEnum? Brand = default(BrandEnum?), int? Bin = default(int?), int? Last = default(int?), string Mask = default(string))
         {
             // to ensure "Brand" is required (not null)
             if (Brand == null)
@@ -121,22 +121,31 @@ namespace IO.Swagger.Model
             {
                 this.Last = Last;
             }
+
+            this.Mask = Mask;
         }
-        
+
 
         /// <summary>
         /// Bin (primeiros 6 dígitos) do cartão.
         /// </summary>
         /// <value>Bin (primeiros 6 dígitos) do cartão.</value>
-        [DataMember(Name="bin", EmitDefaultValue=false)]
+        [DataMember(Name = "bin", EmitDefaultValue = false)]
         public int? Bin { get; set; }
 
         /// <summary>
         /// Last (últimos 4 dígitos) do cartão.
         /// </summary>
         /// <value>Last (últimos 4 dígitos) do cartão.</value>
-        [DataMember(Name="last", EmitDefaultValue=false)]
+        [DataMember(Name = "last", EmitDefaultValue = false)]
         public int? Last { get; set; }
+
+        /// <summary>
+        /// Mask cartão trancate.
+        /// </summary>
+        /// <value>Mask cartão trancate.</value>
+        [DataMember(Name = "Mask", EmitDefaultValue = false)]        
+        public string Mask { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -147,12 +156,13 @@ namespace IO.Swagger.Model
             var sb = new StringBuilder();
             sb.Append("class OrdersCard {\n");
             sb.Append("  Brand: ").Append(Brand).Append("\n");
+            sb.Append("  Mask: ").Append(Mask).Append("\n");
             sb.Append("  Bin: ").Append(Bin).Append("\n");
             sb.Append("  Last: ").Append(Last).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -184,21 +194,26 @@ namespace IO.Swagger.Model
             if (other == null)
                 return false;
 
-            return 
+            return
                 (
                     this.Brand == other.Brand ||
                     this.Brand != null &&
                     this.Brand.Equals(other.Brand)
-                ) && 
+                ) &&
                 (
                     this.Bin == other.Bin ||
                     this.Bin != null &&
                     this.Bin.Equals(other.Bin)
-                ) && 
+                ) &&
                 (
                     this.Last == other.Last ||
                     this.Last != null &&
                     this.Last.Equals(other.Last)
+                ) &&
+                (
+                    this.Mask == other.Mask ||
+                    this.Mask != null &&
+                    this.Mask.Equals(other.Mask)
                 );
         }
 
@@ -219,6 +234,8 @@ namespace IO.Swagger.Model
                     hash = hash * 59 + this.Bin.GetHashCode();
                 if (this.Last != null)
                     hash = hash * 59 + this.Last.GetHashCode();
+                if (this.Mask != null)
+                    hash = hash * 59 + this.Mask.GetHashCode();
                 return hash;
             }
         }
