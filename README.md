@@ -1,4 +1,4 @@
-# IO.Swagger - the C# library for the LIO - Order Management API
+# IO.Swagger - the C# library for the LIO - Order Management API - DEPRECATED
 
 API de gerenciamento de pedidos da LIO.
 
